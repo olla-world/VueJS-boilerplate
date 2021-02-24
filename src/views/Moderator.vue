@@ -1,14 +1,16 @@
 <template>
   <div class="container">
-    <header class="jumbotron">
-      <h3>{{content}}</h3>
-    </header>
+    <jumbotron :content="content"></jumbotron>
+    <button class="change" @click="handleClick">click me</button>
   </div>
 </template>
 
 <script>
 import UserService from '../services/user.service';
+import Jumbotron from './../components/Jumbotron'
+
 export default {
+  components: { Jumbotron },
   name: 'Moderator',
   data() {
     return {
@@ -27,6 +29,13 @@ export default {
           error.toString();
       }
     );
-  }
+  },
+
+  methods: {
+    handleClick(){ 
+      console.log("clicked")
+      this.content="changed"
+    }
+  },
 };
 </script>

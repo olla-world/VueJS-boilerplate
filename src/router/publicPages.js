@@ -1,1 +1,1 @@
-export const publicPages = ['/login', '/register', '/home'];
+export const publicPages = ['/login', '/register'];
