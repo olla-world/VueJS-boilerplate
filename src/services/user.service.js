@@ -1,15 +1,21 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = `${process.env.VUE_APP_API_HOST}test/`;
+const API_URL = `${process.env.VUE_APP_API_HOST}`;
 
 class UserService {
   getPublicContent() {
-    return axios.get(API_URL + 'all');
+    return axios.get(API_URL + 'all.json');
   }
 
+  //for real life project
+  // getUserContent() {
+  //   return axios.get(API_URL + 'user.json', { headers: authHeader() });
+  // }
+
+  ///for demo 
   getUserContent() {
-    return axios.get(API_URL + 'user', { headers: authHeader() });
+    return axios.get(API_URL + 'user.json');
   }
 
   getModeratorContent() {

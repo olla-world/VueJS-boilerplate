@@ -20,7 +20,7 @@ export default {
   mounted() {
     UserService.getUserContent().then(
       response => {
-        this.content = response.data;
+        this.content = response.data.content;
       },
       error => {
         this.content =

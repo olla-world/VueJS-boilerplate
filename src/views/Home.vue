@@ -19,7 +19,7 @@ export default {
   mounted() {
     UserService.getPublicContent().then(
       response => {
-        this.content = response.data;
+        this.content = response.data.content;
       },
       error => {
         this.content =
