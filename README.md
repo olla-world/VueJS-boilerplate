@@ -1,4 +1,4 @@
-# boilerplate
+# Boilerplate
 
 ## Project setup
 ```
